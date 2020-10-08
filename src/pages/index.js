@@ -1,12 +1,17 @@
-import React from "react"
+import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
-import Services from "../components/Services"
-import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
-import Blogs from "../components/Blogs"
+import About from "../components/About"
+import Contact from "../components/Contact"
+
 export default () => {
-  return <h2>index page</h2>
+  return (<Layout>
+    <Hero />
+    <About />
+    <Projects />
+    <Contact />
+  </Layout>)
 }
 // ...GatsbyImageSharpFluid

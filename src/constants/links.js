@@ -1,30 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
+
 const data = [
   {
     id: 1,
-    text: "home",
-    url: "/",
+    text: "about",
+    url: "/#aboutSection",
   },
   {
     id: 2,
-    text: "about",
-    url: "/about/",
+    text: "projects",
+    url: "/#projectsSection",
   },
   {
     id: 3,
-    text: "projects",
-    url: "/projects/",
-  },
-  {
-    id: 4,
-    text: "blog",
-    url: "/blog/",
-  },
-  {
-    id: 5,
     text: "contact",
-    url: "/contact/",
+    url: "/#contactSection",
   },
 ]
 
