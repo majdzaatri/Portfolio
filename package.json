@@ -20,6 +20,7 @@
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-recaptcha": "^1.0.5",
     "gatsby-plugin-sharp": "^2.6.0",
     "gatsby-plugin-sitemap": "^2.4.2",
     "gatsby-source-filesystem": "^2.3.0",
@@ -30,6 +31,7 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
     "react-markdown": "^4.3.1",
+    "react-recaptcha": "^2.3.10",
     "react-use": "^15.3.4",
     "smooth-scroll": "^16.1.3"
   },

@@ -1,6 +1,9 @@
 import React from 'react'
 import emailjs from "emailjs-com"
 
+
+var Recaptcha = require('react-recaptcha');
+
 const Contact = () => {
 
     function sendEmail(e) {
@@ -14,6 +17,16 @@ const Contact = () => {
         });
         e.target.reset();
     }
+    const [isVerified, updateVerification] = React.useState(false);
+
+   
+  // specifying verify callback function
+    var verifyCallback = function (response) {
+        if(response){
+            updateVerification(true);
+        }
+    };
+
 
     return(
     <section className="contact-page" id="contactSection">
@@ -21,15 +34,23 @@ const Contact = () => {
             <h3>Get In Touch</h3>
             <form onSubmit={sendEmail}>
                 <div className="form-group">
-                    <input type="text" name="name" className="form-control" placeholder="Full Name" />
-                    <input type="email" name="email" className="form-control" placeholder="Email" />
-                    <textarea name="message" className="form-control" rows="5" placeholder="Message" />
+                    <input type="text" name="name" className="form-control" placeholder="Full Name" required/>
+                    <input type="email" name="email" className="form-control" placeholder="Email" required/>
+                    <textarea name="message" className="form-control" rows="5" placeholder="Message" required/>
                 </div>
-                <button type="submit" value="Send" className="btn submit-btn">submit</button>
+                <div class="recaptcha">
+                    <Recaptcha 
+                        sitekey="6LeZNNUZAAAAABC8iIy8wZ9-ZudRof-tSrLbGwNn"
+                        render="explicit" 
+                        verifyCallback={verifyCallback}
+                    />
+                </div>
+                <button type="submit" value="Send" className="btn submit-btn" style={isVerified ? {} : {pointerEvents: "none", opacity: "0.4"}}>submit</button>
             </form>
         </article>
     </section>
     )
 }
+
 
 export default Contact

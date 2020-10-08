@@ -875,3 +875,12 @@ Contact Page
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+/*
+===============
+recaptcha
+===============
+*/
+.recaptcha{
+  margin: 0 auto 2rem auto;
+  width: 50%;
+}

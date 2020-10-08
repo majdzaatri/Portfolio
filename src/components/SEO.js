@@ -1,9 +1,10 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = () => {
-  return <div>SEO Component</div>
+const SEO = ({pageTitle, description}) => {
+  return <Helmet htmlAttributes={{lang:"en"}} title={`${pageTitle} | Portfolio`}>
+    <meta name="description" content={description} />
+  </Helmet>
 }
 
 export default SEO
