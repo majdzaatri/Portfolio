@@ -1,8 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
 
 module.exports = {
   siteMetadata: {
@@ -15,7 +10,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-recaptcha`,
-    `gatsby-plugin-sitemap`,
+    // `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,9 +23,6 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`projects`],
         singleTypes: [`about`],
       },
@@ -39,9 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/assets/favicon.png",
-  
-        // WebApp Manifest Configuration
-        appName: "Majd Zaatri", // Inferred with your package.json
+        appName: "Majd Zaatri",
         appDescription: "Portfolio",
         developerName: "Majd Zaatri",
         developerURL: null,

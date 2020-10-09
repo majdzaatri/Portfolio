@@ -1,15 +1,13 @@
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
-import Title from './Title'
 
 const query = graphql`
 {
   file(relativePath: {eq: "circle-cropped-profile.png"}) {
     childImageSharp {
-      fluid {
+      fluid(maxWidth: 700) {
         ...GatsbyImageSharpFluid
       }
     }

@@ -27,7 +27,6 @@ const Contact = () => {
         }
     };
 
-
     return(
     <section className="contact-page" id="contactSection">
         <article className="contact-form">
@@ -38,7 +37,7 @@ const Contact = () => {
                     <input type="email" name="email" className="form-control" placeholder="Email" required/>
                     <textarea name="message" className="form-control" rows="5" placeholder="Message" required/>
                 </div>
-                <div class="recaptcha">
+                <div className="recaptcha">
                     <Recaptcha 
                         sitekey="6LeZNNUZAAAAABC8iIy8wZ9-ZudRof-tSrLbGwNn"
                         render="explicit" 

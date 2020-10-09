@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
 {
