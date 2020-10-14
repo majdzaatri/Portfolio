@@ -9,13 +9,21 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-recaptcha`,
+    // `gatsby-plugin-recaptcha`,
     // `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+          async: false,
+          defer: false,
+          args: `?onload=onloadCallback&render=explicit`,
       },
     },
     {
